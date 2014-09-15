@@ -1,0 +1,25 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.Collections;
+import java.util.LinkedList;
+
+
+public class EnemyCarTest {
+	public LinkedList<Box> body;
+	
+	public EnemyCarTest(){
+		//body = new LinkedList<>();
+		//Collections.addAll(body, 
+		//		new Box(1,2),
+		//		new Box(2,2),       movement enemyCar
+		//		new Box(3,2),
+		//		new Box(4,2)
+		//		);
+	}
+	public void drawCar(Graphics g){
+		//for (Box box : body) {
+			g.setColor(Color.green);
+			g.fillRect(15, 20, 40, 75);
+		}
+	}
+//}

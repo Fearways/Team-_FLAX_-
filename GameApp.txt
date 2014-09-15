@@ -1,0 +1,27 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
+
+@SuppressWarnings("serial")
+public class GameApp extends Applet{
+	 private Game game;
+	
+	
+	public void init(){
+		game = new Game();
+		game.setPreferredSize(new Dimension(200, 400));
+		game.setBackground(Color.gray);
+		game.setVisible(true);
+		game.setFocusable(true);
+		this.add(game);
+		this.setVisible(true);
+		
+	}
+	
+	public void paint(Graphics g){
+		this.setSize(new Dimension(250, 450));
+		
+	}
+}
