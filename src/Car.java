@@ -12,7 +12,7 @@ public class Car {
 	public Car() {
 		car = new Box(10, 16);
 
-		VelX = 1;
+		VelX = 0;
 		VelY = 0;
 	}
 
@@ -23,9 +23,23 @@ public class Car {
 	}
 
 	public void tick() {
-		Box nextPos = new Box(car.x + 1, car.y + VelY);
-		boolean outOfBounds = car.x > 25 || car.x < 5;
+		if (car.x == 0) {
+			if (VelX > 0) {
+				car = new Box(car.x + VelX, car.y + VelY);
+			} else {
+				car = new Box(car.x = 0, car.y + VelY);
+			}
+		} else if (car.x == 19) {
+			if (VelX < 0) {
+				car = new Box(car.x + VelX, car.y + VelY);
+			} else {
+				car = new Box(car.x = 19, car.y + VelY);
+			}
+
+		} else {
 			car = new Box(car.x + VelX, car.y + VelY);
+		}
+
 	}
 
 	public int getVelX() {

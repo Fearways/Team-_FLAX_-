@@ -1,5 +1,8 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class Obstacle {
@@ -17,9 +20,10 @@ public class Obstacle {
 		int y = randomGenerator.nextInt(1);
 
 		Box b = new Box(x, y);
-
+		
 		return b;
 	}
+	
 
 	public void drawObstacle(Graphics g) {
 		int boxSize = obstacleBox.OBSTACLE_SIZE;
