@@ -1,5 +1,4 @@
 ---dvijenie na kolata
 -kato cqlo raboti, no kogato produlji za po-dulgo v edna posoka se poluchava neshto kato lag, a ne mojah da razbera zashto
-
 ---nasreshten trafik
 -vse oshte nqmam ideq v kakvo shte se pazi razpolojenieto na vsqka edna ot drugite koli, za da prekratqvame rabotata na programata, kogato ima sblusuk
