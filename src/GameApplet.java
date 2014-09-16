@@ -11,7 +11,7 @@ public class GameApplet extends Applet {
 	public void init() {
 		game = new Game();
 		game.setBackground(Color.lightGray);
-		game.setPreferredSize(new Dimension(game.WIDTH, game.HEIGHT));
+		game.setPreferredSize(new Dimension(500, 600));
 		game.setVisible(true);
 		game.setFocusable(true);
 		this.add(game);
@@ -19,8 +19,7 @@ public class GameApplet extends Applet {
 		iHandler = new Input(game);
 	}
 
-	
 	public void paint(Graphics g) {
-		this.setSize(new Dimension(800, 650));
+		this.setSize(new Dimension(550, 650));
 	}
 }

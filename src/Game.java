@@ -46,6 +46,17 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void render(Graphics g) {
+
+//		int lqvaMarkirovka = 10;
+//		for (int i = 0; i < 15; i++, lqvaMarkirovka+=30) {
+//		g.setColor(Color.white);
+//		g.fillRect(65, lqvaMarkirovka, 5, 20);
+//		} //STATICHNA za sega
+//		int dqsnaMarkirovka = 10;
+//		for (int i = 0; i < 15; i++, dqsnaMarkirovka+=30) {
+//		g.setColor(Color.white);
+//		g.fillRect(130, dqsnaMarkirovka, 5, 20);
+//		}
 		g.clearRect(0, 0, WIDTH, HEIGHT);
 		car.drawCar(globalGraphics);
 		obstalce.drawObstacle(g);

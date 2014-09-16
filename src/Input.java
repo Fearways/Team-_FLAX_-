@@ -18,11 +18,11 @@ public class Input implements KeyListener {
 		int keyCode = e.getKeyCode();
 
 		if (keyCode == KeyEvent.VK_RIGHT) {
-			Game.car.setVelX(1);
-			Game.car.setVelY(0);
+			Game.car.setMovementX(5);
+			Game.car.setMovementY(0);
 		} else if (keyCode == KeyEvent.VK_LEFT) {
-			Game.car.setVelX(-1);
-			Game.car.setVelY(0);
+			Game.car.setMovementX(-5);
+			Game.car.setMovementY(0);
 		}
 		if (keyCode == KeyEvent.VK_ESCAPE) {
 			System.exit(0);

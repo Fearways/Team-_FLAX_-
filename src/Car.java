@@ -7,53 +7,58 @@ import java.util.LinkedList;
 public class Car {
 	public Box car;
 
-	private int VelX, VelY;
+	private int MovementX, movementY;
 
 	public Car() {
 		car = new Box(10, 16);
 
-		VelX = 0;
-		VelY = 0;
+		MovementX = 0;
+		movementY = 0;
 	}
 
 	public void drawCar(Graphics g) {
 		g.setColor(Color.BLACK);
+		// g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
+		// Box.CAR_WIDTH, Box.CAR_HEIGHT);
 		g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
+		// g.fillRect(80, 310, 40, 75);
 	}
 
 	public void tick() {
 		if (car.x == 0) {
-			if (VelX > 0) {
-				car = new Box(car.x + VelX, car.y + VelY);
+			if (MovementX > 0) {
+				car = new Box(car.x + MovementX, car.y + movementY);
 			} else {
-				car = new Box(car.x = 0, car.y + VelY);
+				car = new Box(car.x = 0, car.y + movementY);
 			}
 		} else if (car.x == 19) {
-			if (VelX < 0) {
-				car = new Box(car.x + VelX, car.y + VelY);
+			if (MovementX < 0) {
+				car = new Box(car.x + MovementX, car.y + movementY);
 			} else {
-				car = new Box(car.x = 19, car.y + VelY);
+				car = new Box(car.x = 19, car.y + movementY);
 			}
 
 		} else {
-			car = new Box(car.x + VelX, car.y + VelY);
+			car = new Box(car.x + MovementX, car.y + movementY);
 		}
+		Game.car.setMovementX(0);
+		Game.car.setMovementY(0);
 	}
 
-	public int getVelX() {
-		return VelX;
+	public int getMovementX() {
+		return MovementX;
 	}
 
-	public void setVelX(int velX) {
-		this.VelX = velX;
+	public void setMovementX(int velX) {
+		this.MovementX = velX;
 	}
 
-	public int getVelY() {
-		return VelY;
+	public int getMovementY() {
+		return movementY;
 	}
 
-	public void setVelY(int velY) {
-		this.VelY = velY;
+	public void setMovementY(int velY) {
+		this.movementY = velY;
 	}
 }
