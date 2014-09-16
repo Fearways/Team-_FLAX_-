@@ -39,7 +39,6 @@ public class Car {
 		} else {
 			car = new Box(car.x + VelX, car.y + VelY);
 		}
-
 	}
 
 	public int getVelX() {

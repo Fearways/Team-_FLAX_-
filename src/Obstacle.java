@@ -23,7 +23,6 @@ public class Obstacle {
 		
 		return b;
 	}
-	
 
 	public void drawObstacle(Graphics g) {
 		int boxSize = obstacleBox.OBSTACLE_SIZE;
