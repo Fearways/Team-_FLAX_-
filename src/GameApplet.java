@@ -19,6 +19,7 @@ public class GameApplet extends Applet {
 		iHandler = new Input(game);
 	}
 
+	
 	public void paint(Graphics g) {
 		this.setSize(new Dimension(800, 650));
 	}
