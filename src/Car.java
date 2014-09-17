@@ -6,6 +6,12 @@ import java.util.LinkedList;
 
 public class Car {
 	public Box car;
+	//Сложете името на снимката на колата на мястото на Car.png.
+		private Image image = Toolkit.getDefaultToolkit().createImage(
+			"res/Car.png");
+	//От тук се променя големината на снимката
+	int widthSize = 50;
+	int heightSize = 20;
 
 	private int MovementX, movementY;
 
@@ -20,6 +26,7 @@ public class Car {
 		g.setColor(Color.BLACK);
 		g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
+		g.drawImage(image, MovementX, movementY, widthSize, heightSize, null);
 		g.setColor(Color.gray);
 		g.drawRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
