@@ -1,6 +1,8 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 public class Game extends Canvas implements Runnable {
 
@@ -11,7 +13,7 @@ public class Game extends Canvas implements Runnable {
 	public static final int HEIGHT = ROWS * SIZE;
 
 	public static Car car;
-	public static TrafficCar trafficCar;
+	public static TrafficCars trafficCar;
 
 	private Thread runThread;
 	private Graphics globalGraphics;
@@ -30,14 +32,14 @@ public class Game extends Canvas implements Runnable {
 
 	public Game() {
 		car = new Car();
-		trafficCar = new TrafficCar();
+		trafficCar = new TrafficCars();
 	}
 
 	public void run() {
 		while (gameRunning) {
 			car.tick();
 			trafficCar.trafficUpdate();
-			//TrafficCar.trafficUpdate;
+			// TrafficCar.trafficUpdate;
 			render(globalGraphics);
 			try {
 				Thread.sleep(50);

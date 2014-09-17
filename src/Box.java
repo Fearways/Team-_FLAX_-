@@ -1,8 +1,8 @@
 public class Box {
 	public int x, y;
-	public static final int CAR_HEIGHT = 53;
-	public static final int CAR_WIDTH = 40;
-	public static final int TRAFFICCAR_HEIGHT = 35;
+	public static final int CAR_HEIGHT = 40;
+	public static final int CAR_WIDTH = 25;
+	public static final int TRAFFICCAR_HEIGHT = 40;
 	public static final int TRAFFICCAR_WIDTH = 25;
 
 	public Box(int x, int y) {

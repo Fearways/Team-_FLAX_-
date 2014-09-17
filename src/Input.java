@@ -15,16 +15,14 @@ public class Input implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		int keyCode = e.getKeyCode();
 
-		if (keyCode == KeyEvent.VK_RIGHT) {
+
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 			Game.car.setMovementX(1);
-			Game.car.setMovementY(0);
-		} else if (keyCode == KeyEvent.VK_LEFT) {
+		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			Game.car.setMovementX(-1);
-			Game.car.setMovementY(0);
 		}
-		if (keyCode == KeyEvent.VK_ESCAPE) {
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			System.exit(0);
 		}
 	}
@@ -32,7 +30,14 @@ public class Input implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
-
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			Game.car.setMovementX(0);
+		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			Game.car.setMovementX(0);
+		}
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			System.exit(0);
+		}
 	}
 
 }
