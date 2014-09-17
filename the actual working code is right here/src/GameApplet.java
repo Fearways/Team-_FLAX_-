@@ -2,8 +2,6 @@ import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
 
 @SuppressWarnings("serial")
 public class GameApplet extends Applet {
