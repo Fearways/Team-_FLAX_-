@@ -43,4 +43,7 @@ public class TrafficCar {
 			box.y += 1;
 		}
 	}
+	public static LinkedList<Box> getTrafficCar() {
+			return trafficCars;
+		}
 }
