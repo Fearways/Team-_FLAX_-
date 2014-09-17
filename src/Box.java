@@ -2,7 +2,8 @@ public class Box {
 	public int x, y;
 	public static final int CAR_HEIGHT = 35;
 	public static final int CAR_WIDTH = 25;
-	public static final int OBSTACLE_SIZE = 20;
+	public static final int TRAFFICCAR_HEIGHT = 25;
+	public static final int TRAFFICCAR_WIDTH = 15;
 
 	public Box(int x, int y) {
 		this.x = x;

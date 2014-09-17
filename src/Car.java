@@ -18,11 +18,11 @@ public class Car {
 
 	public void drawCar(Graphics g) {
 		g.setColor(Color.BLACK);
-		// g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
-		// Box.CAR_WIDTH, Box.CAR_HEIGHT);
 		g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
-		// g.fillRect(80, 310, 40, 75);
+		g.setColor(Color.gray);
+		g.drawRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
+				Box.CAR_WIDTH, Box.CAR_HEIGHT);
 	}
 
 	public void tick() {
