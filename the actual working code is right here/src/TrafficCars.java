@@ -37,6 +37,8 @@ public class TrafficCars {
 	public void trafficUpdate() {
 		randomGenerator = new Random();
 		Box newCar = new Box(randomGenerator.nextInt(33), -5);
+		Box newCarLevelInsane = new Box(randomGenerator.nextInt(33), -5);
+		Box newCarLevelCrazy = new Box(randomGenerator.nextInt(33), -5);
 		if (score < 150 & randomGenerator.nextInt(range) == 1) {
 			trafficCars.add(newCar);
 		} else if (score >= 150
@@ -53,12 +55,22 @@ public class TrafficCars {
 			trafficCars.add(newCar);
 			level = 3;
 		} else if (score >= 600
+				&& score < 900
 				&& (randomGenerator.nextInt(range) == 1
 						|| randomGenerator.nextInt(range) == 2
 						|| randomGenerator.nextInt(range) == 3 || randomGenerator
 						.nextInt(range) == 4)) {
 			trafficCars.add(newCar);
 			level = 4;
+		} else if (score >= 900
+				&& (randomGenerator.nextInt(range) == 1
+						|| randomGenerator.nextInt(range) == 2
+						|| randomGenerator.nextInt(range) == 3 || randomGenerator
+						.nextInt(range) == 4)) {
+			trafficCars.add(newCar);
+			trafficCars.add(newCarLevelInsane);
+			trafficCars.add(newCarLevelCrazy);
+			level = 5;
 		}
 
 		for (Box box : trafficCars) {
