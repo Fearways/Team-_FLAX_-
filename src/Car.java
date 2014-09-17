@@ -1,19 +1,29 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 
-public class Car {
+public class Car extends TrafficCar{
 	public Box car;
 
 	private int MovementX, movementY;
-
+	private int x,y; 
+	private int width;
+    private int height;
+	
 	public Car() {
 		car = new Box(10, 10);
-
+		
 		MovementX = 0;
 		movementY = 0;
+		
+		x = 10;
+		y = 10;
+		width = Box.CAR_WIDTH;
+        	height = Box.CAR_WIDTH;
+        
 	}
 
 	public void drawCar(Graphics g) {
@@ -61,4 +71,30 @@ public class Car {
 	public void setMovementY(int velY) {
 		this.movementY = velY;
 	}
+	
+	public Rectangle getBounds() {
+	    return new Rectangle(x, y, width, height);
+	}
+	
+	public void checkCollisions() {
+		
+		for( int i = 0; i < TrafficCar.getTrafficCar().size(); i++) {
+			Box m = TrafficCar.getTrafficCar().get(i);
+			
+			if (car.getBounds().intersects(m.getBounds())) {
+				System.exit(0);
+				
+			}
+		}
+        /*Rectangle r3 = car.getBounds();
+
+        for (int j = 0; j < trafficCars.size(); j++) {
+            Box r2 = trafficCars.element();
+
+            if (r3.intersects(r2.getBounds())) {
+                System.exit(0);
+            	
+            }
+        }*/
+    }
 }
