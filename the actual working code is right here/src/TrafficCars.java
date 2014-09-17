@@ -50,7 +50,4 @@ public class TrafficCars {
 			}
 		}
 	}
-	public static LinkedList<Box> getTrafficCar() {
-			return trafficCars;
-		}
 }

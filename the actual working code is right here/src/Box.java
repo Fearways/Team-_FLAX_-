@@ -1,5 +1,3 @@
-import java.awt.Rectangle;
-
 public class Box {
 	public int x, y;
 	public static final int CAR_HEIGHT = 40;
@@ -22,8 +20,5 @@ public class Box {
 			return (this.x == b.x && this.y == b.y);
 		}
 		return false;
-	}
-	public Rectangle getBounds() {
-	    return new Rectangle(x, y, CAR_WIDTH, CAR_HEIGHT);
 	}
 }
