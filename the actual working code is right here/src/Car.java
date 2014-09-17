@@ -8,7 +8,6 @@ public class Car {
 
 	public Car() {
 		car = new Box(10, 14);
-
 		MovementX = 0;
 		movementY = 0;
 	}

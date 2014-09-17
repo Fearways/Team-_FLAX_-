@@ -9,7 +9,6 @@ import java.awt.Toolkit;
 public class GameApplet extends Applet {
 	private Game game;
 	Input iHandler;
-	Image car = Toolkit.getDefaultToolkit().createImage("res/car.png");
 
 	public void init() {
 		game = new Game();

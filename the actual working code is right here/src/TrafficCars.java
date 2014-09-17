@@ -19,10 +19,10 @@ public class TrafficCars {
 		toggle ^= true;
 		for (Box box : trafficCars) {
 			if (toggle == true) {
-				g.setColor(Color.BLUE);
+				g.setColor(Color.blue);
 			}
-			if (toggle == false) {
-				g.setColor(Color.RED);
+			if (toggle == false) { 
+				g.setColor(Color.red);
 			}
 			g.fillRect(box.x * Box.TRAFFICCAR_WIDTH, box.y
 					* Box.TRAFFICCAR_HEIGHT, Box.TRAFFICCAR_WIDTH,
