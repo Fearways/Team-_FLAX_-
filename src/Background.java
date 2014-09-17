@@ -10,8 +10,10 @@ import javax.swing.JPanel;
 public class Backgound extends JPanel {
 	private int width = 0;
 	private int height = 0;
+	//Смени background.png с името на снимката за фона
 	private Image image = Toolkit.getDefaultToolkit().createImage(
 			"res/background.png");
+	//Смени gameover.png с името на снимката за GAME OVER		
 	public Image gameOver = Toolkit.getDefaultToolkit().createImage(
 			"res/gameover.png");
 	private int x1 = 0;
