@@ -10,7 +10,7 @@ public class Car {
 	private int MovementX, movementY;
 
 	public Car() {
-		car = new Box(10, 16);
+		car = new Box(10, 10);
 
 		MovementX = 0;
 		movementY = 0;
@@ -20,7 +20,7 @@ public class Car {
 		g.setColor(Color.BLACK);
 		g.fillRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
-		g.setColor(Color.gray);
+		g.setColor(Color.WHITE);
 		g.drawRect(car.x * Box.CAR_WIDTH, car.y * Box.CAR_HEIGHT,
 				Box.CAR_WIDTH, Box.CAR_HEIGHT);
 	}
@@ -32,11 +32,11 @@ public class Car {
 			} else {
 				car = new Box(car.x = 0, car.y + movementY);
 			}
-		} else if (car.x == 19) {
+		} else if (car.x == 13) {
 			if (MovementX < 0) {
 				car = new Box(car.x + MovementX, car.y + movementY);
 			} else {
-				car = new Box(car.x = 19, car.y + movementY);
+				car = new Box(car.x = 13, car.y + movementY);
 			}
 
 		} else {

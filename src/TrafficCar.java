@@ -17,7 +17,11 @@ public class TrafficCar {
 
 	public void drawTrafficCar(Graphics g) {
 		for (Box box : trafficCars) {
-			g.setColor(Color.red);
+			if (randomGenerator.nextInt(10) < 5) {
+				g.setColor(Color.BLUE);
+			} else {
+				g.setColor(Color.RED);
+			}
 			g.fillRect(box.x * Box.TRAFFICCAR_WIDTH, box.y
 					* Box.TRAFFICCAR_HEIGHT, Box.TRAFFICCAR_WIDTH,
 					Box.TRAFFICCAR_HEIGHT);
@@ -32,7 +36,7 @@ public class TrafficCar {
 	public void trafficUpdate() {
 		randomGenerator = new Random();
 		Box newCar = new Box(randomGenerator.nextInt(33), 0);
-		if (randomGenerator.nextInt(7)==1) {
+		if (randomGenerator.nextInt(7) == 1) {
 			trafficCars.add(newCar);
 		}
 		for (Box box : trafficCars) {

@@ -37,7 +37,7 @@ public class Game extends Canvas implements Runnable {
 		while (gameRunning) {
 			car.tick();
 			trafficCar.trafficUpdate();
-			// TrafficCar.trafficUpdate;
+			//TrafficCar.trafficUpdate;
 			render(globalGraphics);
 			try {
 				Thread.sleep(50);
