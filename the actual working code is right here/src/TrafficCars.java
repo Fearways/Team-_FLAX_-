@@ -46,13 +46,13 @@ public class TrafficCars {
 			trafficCars.add(newCar);
 			level = 2;
 		} else if (score >= 300
-				&& score < 450
+				&& score < 600
 				&& (randomGenerator.nextInt(range) == 1
 						|| randomGenerator.nextInt(range) == 2 || randomGenerator
 						.nextInt(range) == 3)) {
 			trafficCars.add(newCar);
 			level = 3;
-		} else if (score >= 450
+		} else if (score >= 600
 				&& (randomGenerator.nextInt(range) == 1
 						|| randomGenerator.nextInt(range) == 2
 						|| randomGenerator.nextInt(range) == 3 || randomGenerator
@@ -60,12 +60,12 @@ public class TrafficCars {
 			trafficCars.add(newCar);
 			level = 4;
 		}
+
 		for (Box box : trafficCars) {
 			box.y += 1;
-			if (box.y == 4) {
+			if (box.y == 15) {
 				score += 5;
 			}
-
 			if (Game.car.car.x == box.x && Game.car.car.y - 1 == box.y) {
 				Game.gameRunning = false;
 			}

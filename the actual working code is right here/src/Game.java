@@ -38,7 +38,6 @@ public class Game extends Canvas implements Runnable {
 		while (gameRunning) {
 			car.tick();
 			trafficCar.trafficUpdate();
-			// TrafficCar.trafficUpdate;
 			render(globalGraphics);
 			try {
 				Thread.sleep(50);
@@ -66,5 +65,4 @@ public class Game extends Canvas implements Runnable {
 		g.setColor(Color.white);
 		g.drawString("Level: " + level, 6, 10);
 	}
-
 }

@@ -21,10 +21,9 @@ public class GameApplet extends Applet {
 		this.setVisible(true);
 		iHandler = new Input(game);
 	}
-
+	
 	public void paint(Graphics g) {
 		super.paint(g);
 		this.setSize(new Dimension(550, 650));
-
 	}
 }
