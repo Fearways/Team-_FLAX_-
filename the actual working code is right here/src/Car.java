@@ -1,8 +1,5 @@
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
 
 public class Car {
 	public Box car;
