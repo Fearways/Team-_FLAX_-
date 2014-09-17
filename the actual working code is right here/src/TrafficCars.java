@@ -7,8 +7,9 @@ public class TrafficCars {
 	private Random randomGenerator;
 	public static LinkedList<Box> trafficCars;
 	private boolean toggle = true;
+	public int score = 1;
+	public int level = 1;
 	private int range = 7;
-	private int score = 1;
 
 	public TrafficCars() {
 		trafficCars = new LinkedList<>();
@@ -30,24 +31,41 @@ public class TrafficCars {
 			g.drawRect(box.x * Box.TRAFFICCAR_WIDTH, box.y
 					* Box.TRAFFICCAR_HEIGHT, Box.TRAFFICCAR_WIDTH,
 					Box.TRAFFICCAR_HEIGHT);
-
 		}
 	}
 
 	public void trafficUpdate() {
 		randomGenerator = new Random();
-		Box newCar = new Box(randomGenerator.nextInt(33), -3);
-		if (randomGenerator.nextInt(range) == 1) {
+		Box newCar = new Box(randomGenerator.nextInt(33), -5);
+		if (score < 150 & randomGenerator.nextInt(range) == 1) {
 			trafficCars.add(newCar);
+		} else if (score >= 150
+				&& score < 300
+				&& (randomGenerator.nextInt(range) == 1 || randomGenerator
+						.nextInt(range) == 2)) {
+			trafficCars.add(newCar);
+			level = 2;
+		} else if (score >= 300
+				&& score < 450
+				&& (randomGenerator.nextInt(range) == 1
+						|| randomGenerator.nextInt(range) == 2 || randomGenerator
+						.nextInt(range) == 3)) {
+			trafficCars.add(newCar);
+			level = 3;
+		} else if (score >= 450
+				&& (randomGenerator.nextInt(range) == 1
+						|| randomGenerator.nextInt(range) == 2
+						|| randomGenerator.nextInt(range) == 3 || randomGenerator
+						.nextInt(range) == 4)) {
+			trafficCars.add(newCar);
+			level = 4;
 		}
 		for (Box box : trafficCars) {
 			box.y += 1;
 			if (box.y == 4) {
 				score += 5;
 			}
-			if (score % 50 == 0) {
-				range--;
-			}
+
 			if (Game.car.car.x == box.x && Game.car.car.y - 1 == box.y) {
 				Game.gameRunning = false;
 			}

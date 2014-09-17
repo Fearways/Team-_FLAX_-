@@ -1,4 +1,5 @@
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Game extends Canvas implements Runnable {
@@ -25,6 +26,7 @@ public class Game extends Canvas implements Runnable {
 			runThread.start();
 			gameRunning = true;
 		}
+
 	}
 
 	public Game() {
@@ -44,11 +46,25 @@ public class Game extends Canvas implements Runnable {
 				e.printStackTrace();
 			}
 		}
+		drawScore(globalGraphics);
 	}
 
 	public void render(Graphics g) {
 		g.clearRect(0, 0, WIDTH, HEIGHT);
 		car.drawCar(globalGraphics);
 		trafficCar.drawTrafficCar(g);
+		drawLevel(trafficCar.level, globalGraphics);
 	}
+
+	private void drawScore(Graphics g) {
+		g.setColor(Color.white);
+		g.drawString("Your score: " + (trafficCar.score - 1), WIDTH / 2 - 50,
+				HEIGHT / 2);
+	}
+
+	private void drawLevel(int level, Graphics g) {
+		g.setColor(Color.white);
+		g.drawString("Level: " + level, 6, 10);
+	}
+
 }
